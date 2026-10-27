@@ -1,0 +1,90 @@
+{
+  "id": "X02",
+  "attempts": 1,
+  "errors": [],
+  "sheet": {
+    "origin_city": {
+      "value": "Bayamón",
+      "quote": "Bayamón"
+    },
+    "destination_city": {
+      "value": "Guaynabo",
+      "quote": "Guaynabo"
+    },
+    "move_date": {
+      "value": "2026-11-07",
+      "quote": "el 7 de noviembre"
+    },
+    "date_changed": {
+      "value": false,
+      "quote": null
+    },
+    "home_type": {
+      "value": "apartment",
+      "quote": "apartamento"
+    },
+    "bedrooms": {
+      "value": 1,
+      "quote": "1 cuarto"
+    },
+    "origin_floor": {
+      "value": 4,
+      "quote": "cuarto piso"
+    },
+    "origin_elevator": {
+      "value": true,
+      "quote": "el ascensor funciona"
+    },
+    "long_carry": {
+      "value": false,
+      "quote": null
+    },
+    "areas_mentioned": {
+      "value": [],
+      "quote": null
+    },
+    "inventory": {
+      "value": [
+        "unas 10 cajas",
+        "los muebles de siempre"
+      ],
+      "quote": "unas 10 cajas y los muebles de siempre"
+    },
+    "bed_count": {
+      "value": null,
+      "quote": null
+    },
+    "specialty_items": {
+      "value": [],
+      "quote": null
+    },
+    "extra_stops": {
+      "value": [],
+      "quote": null
+    },
+    "price_commitment": {
+      "value": false,
+      "quote": null
+    },
+    "packing": {
+      "value": false,
+      "quote": null
+    },
+    "storage": {
+      "value": false,
+      "quote": null
+    },
+    "storage_duration": {
+      "value": null,
+      "quote": null
+    },
+    "language": {
+      "value": "es",
+      "quote": null
+    },
+    "is_commercial": {
+      "value": false,
+      "quote": null
+    }
+  }
+}

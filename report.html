@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quote Playbook + Inbox</title>
+<meta name="description" content="A sample moving-quote agent: messy lead in, quote sheet out, a written Playbook decides what a human must see, with an eval that shows its failures.">
+<style>
+:root { --bg:#fbfaf7; --fg:#1d1d1b; --muted:#6b6a65; --line:#e3e0d8; --card:#ffffff;
+  --mark:#fff0a8; --inbox:#9a3412; --ask:#1d4ed8; --auto:#166534; --accent:#7c2d12; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg:#141413; --fg:#ecebe6; --muted:#a3a29b; --line:#2e2d2a; --card:#1c1c1a;
+  --mark:#5c4a00; --inbox:#fdba74; --ask:#93c5fd; --auto:#86efac; --accent:#fdba74; } }
+:root[data-theme="dark"] { --bg:#141413; --fg:#ecebe6; --muted:#a3a29b; --line:#2e2d2a; --card:#1c1c1a;
+  --mark:#5c4a00; --inbox:#fdba74; --ask:#93c5fd; --auto:#86efac; --accent:#fdba74; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg);
+  font:16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+main { max-width:1080px; margin:0 auto; padding:32px 16px 64px; }
+h1 { font-size:clamp(1.7rem,4vw,2.4rem); line-height:1.15; margin:0 0 8px; }
+h2 { margin:48px 0 12px; font-size:1.35rem; }
+h3 { margin:0 0 12px; font-size:1.05rem; }
+h4 { margin:0 0 6px; font-size:.8rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); }
+p { margin:0 0 12px; }
+a { color:var(--accent); }
+.muted, .cite { color:var(--muted); }
+.cite { font-size:.88rem; }
+.sample { border:1px solid var(--line); background:var(--card); padding:10px 14px; border-radius:8px; font-size:.92rem; }
+blockquote { margin:0 0 12px; padding:2px 0 2px 14px; border-left:3px solid var(--line); }
+.case { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px; margin:16px 0; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
+.lead { font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:.85rem; overflow-wrap:anywhere; }
+mark { background:var(--mark); color:inherit; padding:0 2px; }
+table { border-collapse:collapse; width:100%; font-size:.9rem; }
+th, td { text-align:left; padding:5px 8px; border-bottom:1px solid var(--line); vertical-align:top; overflow-wrap:anywhere; }
+.sheet th { color:var(--muted); font-weight:500; width:40%; }
+.scroll { overflow-x:auto; }
+.scroll table { min-width:640px; }
+.route { font-weight:700; }
+.route-inbox { color:var(--inbox); } .route-ask { color:var(--ask); } .route-auto_quote { color:var(--auto); }
+.flags { padding-left:18px; margin:0; } .flags li { margin-bottom:8px; }
+.tag { font-size:.75rem; font-weight:500; color:var(--muted); }
+footer { margin-top:56px; padding-top:16px; border-top:1px solid var(--line); font-size:.9rem; color:var(--muted); }
+</style></head>
+<body><main>
+
+<h1>Quote Playbook + Inbox</h1>
+<p>A messy lead goes in, and a quote sheet comes out. A written Playbook then decides one of three things: send the quote, ask the customer one question, or put it in a human's Inbox with the reason and the customer's own words attached. An eval scores the whole thing, and the failures are shown.</p>
+<p class="sample"><b>All data on this page is SAMPLE.</b> Every lead was invented for this demo. Nothing here touches a real customer or Supermove's product. The Playbook is a sample written for this demo, not Supermove's.</p>
+
+<h2>The problem, in Supermove's words</h2>
+<p class="muted">Quoted word for word from Supermove's public blog, checked against each page on Oct 27, 2026.</p>
+<blockquote>“45-minute quote turnarounds compressed to 1 minute, 24/7.” <span class="cite">: <a href="https://www.supermove.com/blog/the-future-of-ai-for-moving-companies">The Future of AI for Moving Companies</a></span></blockquote>
+<blockquote>When an Agent hits “a scope change that affects the price of a move, it doesn't guess. It routes the decision to the right person with everything they need already attached.” <span class="cite">: <a href="https://www.supermove.com/blog/introducing-autopilot-the-moving-industrys-first-autonomous-ai">Introducing Autopilot</a></span></blockquote>
+<blockquote>“Pick one workflow. Capture how your best people really handle it.” “Run it. Review it. Correct it.” “The more AI can do, the more trust matters.” <span class="cite">: <a href="https://www.supermove.com/blog/2030-came-early-the-7-big-takeaways-from-f50-2026">7 takeaways from F50 2026</a></span></blockquote>
+<blockquote>A company “turned a $1,800 quote into a $3,400 invoice.” <span class="cite">: <a href="https://www.supermove.com/blog/why-accurate-estimates-are-crucial-for-a-moving-companys-reputation">Why Accurate Estimates Are Crucial</a></span></blockquote>
+<p>This demo is the step in between: <b>which quotes are safe to send, which aren't, and a score that proves it.</b></p>
+
+<h2>Three leads, start to finish</h2>
+<p class="muted">Highlighted words are the exact phrases that triggered a rule. The engine checks that every cited phrase really appears in the message.</p>
+
+<article class="case">
+  <h3>L01 · text message <span class="tag">SAMPLE (invented)</span></h3>
+  <div class="grid">
+    <div><h4>1 · Messy input</h4><p class="lead">hey!! so we&#x27;re finally moving lol. our 2 bedroom in Oakland to Sacramento, probably Nov 14 if work lets me. stuff: couch, 2 beds, dining table + chairs, a desk, maybe 30 boxes? we&#x27;re on the 2nd floor, there&#x27;s an elevator but it&#x27;s kinda small. oh and <mark>grandma&#x27;s piano, it&#x27;s an upright</mark>, she&#x27;d kill me if anything happened to it</p></div>
+    <div><h4>2 · Quote sheet</h4><table class="sheet"><tr><th>origin city</th><td>Oakland</td></tr><tr><th>destination city</th><td>Sacramento</td></tr><tr><th>move date</th><td>2026-11-14</td></tr><tr><th>home type</th><td>unknown</td></tr><tr><th>bedrooms</th><td>2</td></tr><tr><th>origin floor</th><td>2</td></tr><tr><th>origin elevator</th><td>yes</td></tr><tr><th>long carry</th><td>no</td></tr><tr><th>inventory</th><td>couch, 2 beds, dining table, chairs, a desk, 30 boxes, grandma&#x27;s piano</td></tr><tr><th>specialty items</th><td>upright piano</td></tr><tr><th>extra stops</th><td><span class="muted">none</span></td></tr><tr><th>packing</th><td>no</td></tr><tr><th>storage</th><td>no</td></tr><tr><th>language</th><td>en</td></tr><tr><th>est. weight</th><td>3,400–4,600 lb <span class='muted'>(sample rule of thumb)</span></td></tr></table></div>
+    <div><h4>3 · Playbook decision</h4>
+      <p class="route route-inbox">Inbox: a human approves</p>
+      <ul class="flags"><li><b>SPECIALTY_ITEM</b> → inbox. Specialty item (upright piano): special crew/valuation, price changes.<br><span class='cite'>Customer's words: “grandma&#x27;s piano, it&#x27;s an upright” ✓ found in message</span></li></ul></div>
+  </div>
+</article>
+<article class="case">
+  <h3>L06 · web form <span class="tag">SAMPLE (invented)</span></h3>
+  <div class="grid">
+    <div><h4>1 · Messy input</h4><p class="lead">1BR, 3rd floor <mark>walkup</mark> in Park Slope, Brooklyn, moving to Jersey City on December 1st. Queen bed, dresser, couch, TV stand, about 15 boxes. Street parking only on my block, so <mark>the truck will probably have to park half a block away</mark>.</p></div>
+    <div><h4>2 · Quote sheet</h4><table class="sheet"><tr><th>origin city</th><td>Park Slope, Brooklyn</td></tr><tr><th>destination city</th><td>Jersey City</td></tr><tr><th>move date</th><td>2026-12-01</td></tr><tr><th>home type</th><td>apartment</td></tr><tr><th>bedrooms</th><td>1</td></tr><tr><th>origin floor</th><td>3</td></tr><tr><th>origin elevator</th><td>no</td></tr><tr><th>long carry</th><td>yes</td></tr><tr><th>inventory</th><td>Queen bed, dresser, couch, TV stand, about 15 boxes</td></tr><tr><th>specialty items</th><td><span class="muted">none</span></td></tr><tr><th>extra stops</th><td><span class="muted">none</span></td></tr><tr><th>packing</th><td>no</td></tr><tr><th>storage</th><td>no</td></tr><tr><th>language</th><td>en</td></tr><tr><th>est. weight</th><td>2,200–2,800 lb <span class='muted'>(sample rule of thumb)</span></td></tr></table></div>
+    <div><h4>3 · Playbook decision</h4>
+      <p class="route route-inbox">Inbox: a human approves</p>
+      <ul class="flags"><li><b>STAIRS_NO_ELEVATOR</b> → inbox. Floor 3 with no elevator: stair carry changes the price.<br><span class='cite'>Customer's words: “walkup” ✓ found in message</span></li><li><b>LONG_CARRY</b> → inbox. Truck can&#x27;t park at the door: long carry changes the price.<br><span class='cite'>Customer's words: “the truck will probably have to park half a block away” ✓ found in message</span></li></ul></div>
+  </div>
+</article>
+<article class="case">
+  <h3>L05 · WhatsApp <span class="tag">SAMPLE (invented, Puerto Rican Spanish)</span></h3>
+  <div class="grid">
+    <div><h4>1 · Messy input</h4><p class="lead">Buenas, necesito una mudanza de mi apartamento en Carolina a una casa en Caguas. Es un apartamento de 2 cuartos en el segundo piso y el edificio tiene ascensor. Tengo la nevera, un juego de cuarto, el sofá, una mesa con 4 sillas y como 20 cajas que ya tengo empacadas. Sería el sábado 15 de noviembre. ¿Cuánto me sale más o menos?</p></div>
+    <div><h4>2 · Quote sheet</h4><table class="sheet"><tr><th>origin city</th><td>Carolina</td></tr><tr><th>destination city</th><td>Caguas</td></tr><tr><th>move date</th><td>2026-11-15</td></tr><tr><th>home type</th><td>apartment</td></tr><tr><th>bedrooms</th><td>2</td></tr><tr><th>origin floor</th><td>2</td></tr><tr><th>origin elevator</th><td>yes</td></tr><tr><th>long carry</th><td>no</td></tr><tr><th>inventory</th><td>nevera, juego de cuarto, sofá, mesa con 4 sillas, 20 cajas</td></tr><tr><th>specialty items</th><td><span class="muted">none</span></td></tr><tr><th>extra stops</th><td><span class="muted">none</span></td></tr><tr><th>packing</th><td>no</td></tr><tr><th>storage</th><td>no</td></tr><tr><th>language</th><td>es</td></tr><tr><th>est. weight</th><td>3,400–4,600 lb <span class='muted'>(sample rule of thumb)</span></td></tr></table></div>
+    <div><h4>3 · Playbook decision</h4>
+      <p class="route route-auto_quote">Auto-quote</p>
+      <ul class="flags"><li><b>LANGUAGE</b> → note. Lead is in &#x27;es&#x27;. Reply in the customer&#x27;s language.</li></ul></div>
+  </div>
+</article>
+
+<h2>The score, failures included</h2>
+<div class="scroll"><table>
+<tr><th>Run</th><th>Fields right</th><th>Flags caught</th><th>False flags</th><th>Route right</th><th>Quotes found verbatim</th><th>What it means</th></tr>
+<tr><td>v1 · main (10)</td><td>90/90</td><td>14/14</td><td>0</td><td>10/10</td><td>76/76</td><td>written with the rules; proves the plumbing</td></tr><tr><td>v1 · hard (5)</td><td>44/45</td><td>1/5</td><td>0</td><td>1/5</td><td>31/31</td><td><b>written to break it</b></td></tr><tr><td>v2 · main (10)</td><td>90/90</td><td>14/14</td><td>0</td><td>10/10</td><td>74/74</td><td>no regression</td></tr><tr><td>v2 · hard (5)</td><td>45/45</td><td>5/5</td><td>0</td><td>5/5</td><td>34/34</td><td>after the fix: <b>not</b> independent</td></tr><tr><td>v2 · holdout (5)</td><td>45/45</td><td>7/7</td><td>0</td><td>5/5</td><td>37/37</td><td>frozen answers, never used to tune</td></tr>
+</table></div>
+<p><b>What v1 got wrong.</b> All four misses went the dangerous way: the agent would have auto-quoted a lead a human should see.</p>
+<ul><li><b>H01</b>: “Moving my mom out of her place in Tampa into ours in Orlando on Dec 3. She&#x27;s in a 2-bedroom on the 3rd floor. The elevator has been broken for a month…”<br>Missed <b>STAIRS_NO_ELEVATOR</b>. Routed <b>auto_quote</b>, should be <b>inbox</b>. origin_elevator: wanted False, got None</li><li><b>H02</b>: “Need to move my 1BR from Miami to Fort Lauderdale on Nov 8. Can you also grab my sister&#x27;s couch and dresser in Hollywood on the way?”<br>Missed <b>EXTRA_STOP</b>. Routed <b>auto_quote</b>, should be <b>inbox</b>.</li><li><b>H03</b>: “Saludos, me mudo de Ponce pa&#x27; Mayagüez el 20 de diciembre. Es una casa de 3 cuartos y en la marquesina tengo herramientas y un congelador. También hay…”<br>Missed <b>SPECIALTY_ITEM</b>. Routed <b>auto_quote</b>, should be <b>inbox</b>.</li><li><b>H05</b>: “Studio on the 5th floor in Seattle (elevator building) to Tacoma, Nov 12. Can you guarantee it won&#x27;t go over $1,500? That&#x27;s my budget, period.”<br>Missed <b>PRICE_COMMITMENT</b>. Routed <b>auto_quote</b>, should be <b>inbox</b>.</li></ul>
+<p><b>Review it, correct it (v2).</b> Two prompt fixes and two new rules:</p>
+<ul>
+  <li>Broken elevator now counts as none.</li>
+  <li>Specialty items are named in English, so “caja fuerte” is read as a safe.</li>
+  <li>New rule: extra stops go to a human.</li>
+  <li>New rule: price promises go to a human.</li>
+</ul>
+<p>No expected answer was changed; each was written before its set first ran. Then 5 holdout leads, never used for tuning, scored 5/5.</p>
+<p class="muted"><b>Honest limits:</b> the leads, the rules and the test answers came from the same build session. Each set ran once, and the model can vary between runs. Twenty invented leads are a signal, not proof. Real transcripts are the real test.</p>
+
+<h2>The Playbook (v2)</h2>
+<div class="scroll"><table>
+<tr><th>Rule</th><th>Trigger</th><th>Action</th><th>Why</th></tr>
+<tr><td>NO_DATE</td><td>No specific move date</td><td>ask</td><td>Price and crew availability depend on the date. &quot;Sometime next year&quot; is not a date.</td></tr><tr><td>DATE_CHANGED</td><td>The customer changed the date during the conversation</td><td>ask</td><td>Confirm the final date in writing before booking, so the crew is scheduled for the right day.</td></tr><tr><td>MISSING_ADDRESS</td><td>Origin or destination city is missing</td><td>ask</td><td>Distance drives the price.</td></tr><tr><td>SPECIALTY_ITEM</td><td>Piano, safe, gun safe, pool table, hot tub, server rack, antique or fine art</td><td>Inbox</td><td>These need special crew, equipment or valuation. A scope change that affects the price.</td></tr><tr><td>STAIRS_NO_ELEVATOR</td><td>Origin is on the 3rd floor or higher with no working elevator (broken counts as none, v2)</td><td>Inbox</td><td>Stair carries add crew time; the price changes. (The &quot;fifth-floor walkup&quot; question.)</td></tr><tr><td>LONG_CARRY</td><td>The truck can&#x27;t park close to the door</td><td>Inbox</td><td>A long carry adds crew time; the price changes.</td></tr><tr><td>ATTIC_GARAGE_UNKNOWN</td><td>Moving out of a house and the attic, garage, basement or shed is never mentioned</td><td>ask</td><td>The most common hidden volume. Ask before quoting, not on move day.</td></tr><tr><td>INVENTORY_CONFLICT</td><td>More beds listed than the home size can hold (beds &gt; bedrooms + 1, a studio counts as 1)</td><td>Inbox</td><td>The inventory or the home size is wrong, so the quote would be wrong either way.</td></tr><tr><td>STORAGE_NO_DURATION</td><td>Storage is needed but for how long is unknown</td><td>ask</td><td>Storage is billed by time; delivery needs a second date.</td></tr><tr><td>COMMERCIAL</td><td>Office or commercial move</td><td>Inbox</td><td>Different estimator, certificate of insurance, building rules, after-hours work.</td></tr><tr><td>EXTRA_STOP</td><td>A pickup or drop-off besides origin and destination (added v2)</td><td>Inbox</td><td>Extra miles and time; the price changes.</td></tr><tr><td>PRICE_COMMITMENT</td><td>Customer asks for a guaranteed, fixed or not-to-exceed price (added v2)</td><td>Inbox</td><td>A price promise is a business decision, not the agent&#x27;s.</td></tr><tr><td>LANGUAGE</td><td>The lead is not in English</td><td>note (doesn&#x27;t block)</td><td>Answer in the customer&#x27;s language.</td></tr>
+</table></div>
+
+<h2>How it works</h2>
+<ol>
+  <li><b>Extract.</b> A model fills a fixed quote sheet and copies the exact words behind every field. Bad output is retried once. Failures are recorded, never hidden.</li>
+  <li><b>Decide.</b> Plain code, no model, applies the Playbook. Same sheet in, same decision out. Every flag cites the customer's words.</li>
+  <li><b>Score.</b> The output is compared with hand-written answers: fields, flags caught, flags missed, false flags, and the route.</li>
+</ol>
+
+<h2>Week one on a real customer</h2>
+<ol>
+  <li>Sit with their best estimator for a day and write their real Playbook. Their rules, their thresholds, their words.</li>
+  <li>Pull 50 real leads and call transcripts. The estimator marks what they would have done with each. That becomes the eval set.</li>
+  <li>Run it, read every miss, fix the prompt or add a rule, and run again. Report the numbers, including the misses.</li>
+  <li>Start in shadow mode: the agent decides, a human still sends. It goes live rule by rule, only where the score earns it.</li>
+</ol>
+
+<footer>
+  Built by Javier Elías Crespo directing Claude Code. Claude Code wrote the code, the sample leads, the rules and the test answers.
+  Javier chose the problem and the approach and decided to publish it.
+  Python standard library only. Model calls through Claude Code headless.
+</footer>
+</main></body></html>

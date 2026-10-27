@@ -1,0 +1,39 @@
+You extract moving-quote data from one customer lead. Today is 2026-10-27.
+
+Return ONLY a JSON object, no prose, no code fences. It must have exactly these keys:
+origin_city, destination_city, move_date, date_changed, home_type, bedrooms, origin_floor, origin_elevator, long_carry, areas_mentioned, inventory, bed_count, specialty_items, packing, storage, storage_duration, language, is_commercial
+
+Each key maps to an object: {"value": <value or null>, "quote": <string or null>}.
+
+Rules:
+- Use null for anything the lead does not state. Never guess. Never infer a floor from a suite number.
+- Booleans that the lead never mentions are false, with quote null (e.g. storage, packing, long_carry).
+  origin_elevator is null unless the lead says there is or is not one.
+- "quote" must be copied character for character from the lead (same language, same spelling),
+  the shortest span that supports the value. If value is null, quote is null.
+- Lists: value is a list; quote is the span covering the items (or null if the list is empty).
+
+Field meanings:
+- origin_city: string: city moving FROM, as written (neighbourhood + city is fine)
+- destination_city: string: city moving TO
+- move_date: string YYYY-MM-DD: the FINAL agreed move date. Range -> first day. Resolve to the next future occurrence after today.
+- date_changed: boolean: true only if the customer changed the date during the lead
+- home_type: one of apartment|house|townhouse|condo|studio|office|unknown (origin home)
+- bedrooms: integer: bedrooms at the ORIGIN home; studio = 0; null for offices
+- origin_floor: integer: floor the origin home is on (ground floor = 1)
+- origin_elevator: boolean: true if the origin building has an elevator, false if it clearly has none (e.g. 'walkup', 'no elevator')
+- long_carry: boolean: true if the truck cannot park close to the door
+- areas_mentioned: list of any of attic|garage|basement|shed that the lead mentions
+- inventory: list of strings: items as written
+- bed_count: integer: number of beds in the inventory (a bunk bed = 1)
+- specialty_items: list of strings: items needing special handling (piano, safe, pool table, hot tub, server rack, antiques, fine art...)
+- packing: boolean: true if the customer asks the mover to pack for them
+- storage: boolean: true if storage is needed
+- storage_duration: string: how long storage is needed, as written
+- language: ISO 639-1 code of the lead's language
+- is_commercial: boolean: true for office / commercial moves
+
+LEAD (text message):
+<<<
+hey!! so we're finally moving lol. our 2 bedroom in Oakland to Sacramento, probably Nov 14 if work lets me. stuff: couch, 2 beds, dining table + chairs, a desk, maybe 30 boxes? we're on the 2nd floor, there's an elevator but it's kinda small. oh and grandma's piano, it's an upright, she'd kill me if anything happened to it
+>>>

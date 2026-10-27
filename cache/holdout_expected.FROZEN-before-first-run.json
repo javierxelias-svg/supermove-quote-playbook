@@ -1,0 +1,96 @@
+{
+  "X01": {
+    "label": "SAMPLE expected answers, hand-written 2026-10-27 BEFORE any model run; never used to change the Playbook",
+    "fields": {
+      "origin_city": "portland",
+      "destination_city": "seattle",
+      "move_date": "2026-11-15",
+      "bedrooms": 2,
+      "origin_floor": 1,
+      "origin_elevator": null,
+      "specialty_items": [
+        "hot tub"
+      ],
+      "storage": false,
+      "packing": false
+    },
+    "flags": [
+      "SPECIALTY_ITEM"
+    ],
+    "route": "inbox"
+  },
+  "X02": {
+    "label": "SAMPLE expected answers, hand-written 2026-10-27 BEFORE any model run; never used to change the Playbook",
+    "fields": {
+      "origin_city": "bayam",
+      "destination_city": "guaynabo",
+      "move_date": "2026-11-07",
+      "bedrooms": 1,
+      "origin_floor": 4,
+      "origin_elevator": true,
+      "specialty_items": [],
+      "storage": false,
+      "packing": false
+    },
+    "flags": [
+      "LANGUAGE"
+    ],
+    "route": "auto_quote"
+  },
+  "X03": {
+    "label": "SAMPLE expected answers, hand-written 2026-10-27 BEFORE any model run; never used to change the Playbook",
+    "fields": {
+      "origin_city": "tulsa",
+      "destination_city": "oklahoma city",
+      "move_date": null,
+      "bedrooms": 3,
+      "origin_floor": null,
+      "origin_elevator": null,
+      "specialty_items": [],
+      "storage": false,
+      "packing": false
+    },
+    "flags": [
+      "NO_DATE",
+      "ATTIC_GARAGE_UNKNOWN"
+    ],
+    "route": "ask"
+  },
+  "X04": {
+    "label": "SAMPLE expected answers, hand-written 2026-10-27 BEFORE any model run; never used to change the Playbook",
+    "fields": {
+      "origin_city": "chicago",
+      "destination_city": "evanston",
+      "move_date": "2026-11-20",
+      "bedrooms": 1,
+      "origin_floor": 2,
+      "origin_elevator": false,
+      "specialty_items": [],
+      "storage": false,
+      "packing": false
+    },
+    "flags": [
+      "EXTRA_STOP"
+    ],
+    "route": "inbox"
+  },
+  "X05": {
+    "label": "SAMPLE expected answers, hand-written 2026-10-27 BEFORE any model run; never used to change the Playbook",
+    "fields": {
+      "origin_city": "boston",
+      "destination_city": "providence",
+      "move_date": "2026-12-12",
+      "bedrooms": 3,
+      "origin_floor": 6,
+      "origin_elevator": true,
+      "specialty_items": [],
+      "storage": false,
+      "packing": false
+    },
+    "flags": [
+      "LONG_CARRY",
+      "PRICE_COMMITMENT"
+    ],
+    "route": "inbox"
+  }
+}

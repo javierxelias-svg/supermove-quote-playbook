@@ -1,0 +1,13 @@
+lead  route (want)               fields  missed flags                 false flags            bad quotes
+H01   inbox (inbox)              9/9     -                            -                      -
+H02   inbox (inbox)              9/9     -                            -                      -
+H03   inbox (inbox)              9/9     -                            -                      -
+H04   auto_quote (auto_quote)    9/9     -                            -                      -
+H05   inbox (inbox)              9/9     -                            -                      -
+
+fields correct : 45/45
+flags caught   : 5/5  (missed 0)
+false flags    : 0
+route correct  : 5/5
+quotes verbatim: 34/34
+extract failed : 0

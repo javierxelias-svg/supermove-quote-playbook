@@ -1,0 +1,87 @@
+{
+  "id": "L09",
+  "attempts": 1,
+  "errors": [],
+  "sheet": {
+    "origin_city": {
+      "value": "Phoenix",
+      "quote": "Phoenix"
+    },
+    "destination_city": {
+      "value": "Scottsdale",
+      "quote": "Scottsdale"
+    },
+    "move_date": {
+      "value": "2026-11-30",
+      "quote": "Nov 30"
+    },
+    "date_changed": {
+      "value": false,
+      "quote": null
+    },
+    "home_type": {
+      "value": "condo",
+      "quote": "condo"
+    },
+    "bedrooms": {
+      "value": 2,
+      "quote": "2BR"
+    },
+    "origin_floor": {
+      "value": 4,
+      "quote": "4th floor"
+    },
+    "origin_elevator": {
+      "value": true,
+      "quote": "there's an elevator"
+    },
+    "long_carry": {
+      "value": false,
+      "quote": null
+    },
+    "areas_mentioned": {
+      "value": [],
+      "quote": null
+    },
+    "inventory": {
+      "value": [],
+      "quote": null
+    },
+    "bed_count": {
+      "value": null,
+      "quote": null
+    },
+    "specialty_items": {
+      "value": [],
+      "quote": null
+    },
+    "extra_stops": {
+      "value": [],
+      "quote": null
+    },
+    "price_commitment": {
+      "value": false,
+      "quote": null
+    },
+    "packing": {
+      "value": false,
+      "quote": null
+    },
+    "storage": {
+      "value": true,
+      "quote": "everything has to go into storage first"
+    },
+    "storage_duration": {
+      "value": null,
+      "quote": null
+    },
+    "language": {
+      "value": "en",
+      "quote": null
+    },
+    "is_commercial": {
+      "value": false,
+      "quote": null
+    }
+  }
+}

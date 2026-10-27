@@ -1,0 +1,560 @@
+{
+  "totals": {
+    "fields": 45,
+    "fields_ok": 45,
+    "flags_want": 7,
+    "flags_hit": 7,
+    "flags_false": 0,
+    "route_ok": 5,
+    "quotes": 37,
+    "quotes_ok": 37,
+    "extract_failed": 0
+  },
+  "rows": [
+    {
+      "id": "X01",
+      "route": "inbox",
+      "route_want": "inbox",
+      "flags": [
+        {
+          "rule": "SPECIALTY_ITEM",
+          "action": "inbox",
+          "reason": "Specialty item (hot tub): special crew/valuation, price changes.",
+          "evidence": "hot tub",
+          "evidence_in_lead": true
+        }
+      ],
+      "missed": [],
+      "false": [],
+      "wrong_fields": {},
+      "quotes_not_in_lead": [],
+      "weight_lb": [
+        3400,
+        4600
+      ],
+      "sheet": {
+        "origin_city": {
+          "value": "Portland, OR",
+          "quote": "Portland, OR"
+        },
+        "destination_city": {
+          "value": "Seattle",
+          "quote": "Seattle"
+        },
+        "move_date": {
+          "value": "2026-11-15",
+          "quote": "Nov 15"
+        },
+        "date_changed": {
+          "value": false,
+          "quote": null
+        },
+        "home_type": {
+          "value": "unknown",
+          "quote": null
+        },
+        "bedrooms": {
+          "value": 2,
+          "quote": "2BR"
+        },
+        "origin_floor": {
+          "value": 1,
+          "quote": "1st floor"
+        },
+        "origin_elevator": {
+          "value": null,
+          "quote": null
+        },
+        "long_carry": {
+          "value": false,
+          "quote": null
+        },
+        "areas_mentioned": {
+          "value": [],
+          "quote": null
+        },
+        "inventory": {
+          "value": [
+            "hot tub"
+          ],
+          "quote": "hot tub"
+        },
+        "bed_count": {
+          "value": null,
+          "quote": null
+        },
+        "specialty_items": {
+          "value": [
+            "hot tub"
+          ],
+          "quote": "hot tub"
+        },
+        "extra_stops": {
+          "value": [],
+          "quote": null
+        },
+        "price_commitment": {
+          "value": false,
+          "quote": null
+        },
+        "packing": {
+          "value": false,
+          "quote": null
+        },
+        "storage": {
+          "value": false,
+          "quote": null
+        },
+        "storage_duration": {
+          "value": null,
+          "quote": null
+        },
+        "language": {
+          "value": "en",
+          "quote": null
+        },
+        "is_commercial": {
+          "value": false,
+          "quote": null
+        }
+      }
+    },
+    {
+      "id": "X02",
+      "route": "auto_quote",
+      "route_want": "auto_quote",
+      "flags": [
+        {
+          "rule": "LANGUAGE",
+          "action": "note",
+          "reason": "Lead is in 'es'. Reply in the customer's language.",
+          "evidence": null,
+          "evidence_in_lead": false
+        }
+      ],
+      "missed": [],
+      "false": [],
+      "wrong_fields": {},
+      "quotes_not_in_lead": [],
+      "weight_lb": [
+        2200,
+        2800
+      ],
+      "sheet": {
+        "origin_city": {
+          "value": "Bayamón",
+          "quote": "Bayamón"
+        },
+        "destination_city": {
+          "value": "Guaynabo",
+          "quote": "Guaynabo"
+        },
+        "move_date": {
+          "value": "2026-11-07",
+          "quote": "el 7 de noviembre"
+        },
+        "date_changed": {
+          "value": false,
+          "quote": null
+        },
+        "home_type": {
+          "value": "apartment",
+          "quote": "apartamento"
+        },
+        "bedrooms": {
+          "value": 1,
+          "quote": "1 cuarto"
+        },
+        "origin_floor": {
+          "value": 4,
+          "quote": "cuarto piso"
+        },
+        "origin_elevator": {
+          "value": true,
+          "quote": "el ascensor funciona"
+        },
+        "long_carry": {
+          "value": false,
+          "quote": null
+        },
+        "areas_mentioned": {
+          "value": [],
+          "quote": null
+        },
+        "inventory": {
+          "value": [
+            "unas 10 cajas",
+            "los muebles de siempre"
+          ],
+          "quote": "unas 10 cajas y los muebles de siempre"
+        },
+        "bed_count": {
+          "value": null,
+          "quote": null
+        },
+        "specialty_items": {
+          "value": [],
+          "quote": null
+        },
+        "extra_stops": {
+          "value": [],
+          "quote": null
+        },
+        "price_commitment": {
+          "value": false,
+          "quote": null
+        },
+        "packing": {
+          "value": false,
+          "quote": null
+        },
+        "storage": {
+          "value": false,
+          "quote": null
+        },
+        "storage_duration": {
+          "value": null,
+          "quote": null
+        },
+        "language": {
+          "value": "es",
+          "quote": null
+        },
+        "is_commercial": {
+          "value": false,
+          "quote": null
+        }
+      }
+    },
+    {
+      "id": "X03",
+      "route": "ask",
+      "route_want": "ask",
+      "flags": [
+        {
+          "rule": "NO_DATE",
+          "action": "ask",
+          "reason": "No specific move date. Ask for one before quoting.",
+          "evidence": null,
+          "evidence_in_lead": false
+        },
+        {
+          "rule": "ATTIC_GARAGE_UNKNOWN",
+          "action": "ask",
+          "reason": "House move, attic/garage/basement never mentioned. Ask before quoting.",
+          "evidence": "House",
+          "evidence_in_lead": true
+        }
+      ],
+      "missed": [],
+      "false": [],
+      "wrong_fields": {},
+      "quotes_not_in_lead": [],
+      "weight_lb": [
+        4600,
+        6400
+      ],
+      "sheet": {
+        "origin_city": {
+          "value": "Tulsa",
+          "quote": "Tulsa"
+        },
+        "destination_city": {
+          "value": "Oklahoma City",
+          "quote": "Oklahoma City"
+        },
+        "move_date": {
+          "value": null,
+          "quote": null
+        },
+        "date_changed": {
+          "value": false,
+          "quote": null
+        },
+        "home_type": {
+          "value": "house",
+          "quote": "House"
+        },
+        "bedrooms": {
+          "value": 3,
+          "quote": "3 bedrooms"
+        },
+        "origin_floor": {
+          "value": null,
+          "quote": null
+        },
+        "origin_elevator": {
+          "value": null,
+          "quote": null
+        },
+        "long_carry": {
+          "value": false,
+          "quote": null
+        },
+        "areas_mentioned": {
+          "value": [],
+          "quote": null
+        },
+        "inventory": {
+          "value": [],
+          "quote": null
+        },
+        "bed_count": {
+          "value": null,
+          "quote": null
+        },
+        "specialty_items": {
+          "value": [],
+          "quote": null
+        },
+        "extra_stops": {
+          "value": [],
+          "quote": null
+        },
+        "price_commitment": {
+          "value": false,
+          "quote": null
+        },
+        "packing": {
+          "value": false,
+          "quote": null
+        },
+        "storage": {
+          "value": false,
+          "quote": null
+        },
+        "storage_duration": {
+          "value": null,
+          "quote": null
+        },
+        "language": {
+          "value": "en",
+          "quote": null
+        },
+        "is_commercial": {
+          "value": false,
+          "quote": null
+        }
+      }
+    },
+    {
+      "id": "X04",
+      "route": "inbox",
+      "route_want": "inbox",
+      "flags": [
+        {
+          "rule": "EXTRA_STOP",
+          "action": "inbox",
+          "reason": "Extra stop (my parents' place in Skokie): adds time and miles, price changes.",
+          "evidence": "my parents' place in Skokie",
+          "evidence_in_lead": true
+        }
+      ],
+      "missed": [],
+      "false": [],
+      "wrong_fields": {},
+      "quotes_not_in_lead": [],
+      "weight_lb": [
+        2200,
+        2800
+      ],
+      "sheet": {
+        "origin_city": {
+          "value": "Lincoln Park, Chicago",
+          "quote": "Lincoln Park, Chicago"
+        },
+        "destination_city": {
+          "value": "Evanston",
+          "quote": "Evanston"
+        },
+        "move_date": {
+          "value": "2026-11-20",
+          "quote": "Nov 20"
+        },
+        "date_changed": {
+          "value": false,
+          "quote": null
+        },
+        "home_type": {
+          "value": "apartment",
+          "quote": "1BR"
+        },
+        "bedrooms": {
+          "value": 1,
+          "quote": "1BR"
+        },
+        "origin_floor": {
+          "value": 2,
+          "quote": "2nd floor"
+        },
+        "origin_elevator": {
+          "value": false,
+          "quote": "no elevator"
+        },
+        "long_carry": {
+          "value": false,
+          "quote": null
+        },
+        "areas_mentioned": {
+          "value": [],
+          "quote": null
+        },
+        "inventory": {
+          "value": [
+            "dresser"
+          ],
+          "quote": "dresser"
+        },
+        "bed_count": {
+          "value": null,
+          "quote": null
+        },
+        "specialty_items": {
+          "value": [],
+          "quote": null
+        },
+        "extra_stops": {
+          "value": [
+            "my parents' place in Skokie"
+          ],
+          "quote": "my parents' place in Skokie"
+        },
+        "price_commitment": {
+          "value": false,
+          "quote": null
+        },
+        "packing": {
+          "value": false,
+          "quote": null
+        },
+        "storage": {
+          "value": false,
+          "quote": null
+        },
+        "storage_duration": {
+          "value": null,
+          "quote": null
+        },
+        "language": {
+          "value": "en",
+          "quote": null
+        },
+        "is_commercial": {
+          "value": false,
+          "quote": null
+        }
+      }
+    },
+    {
+      "id": "X05",
+      "route": "inbox",
+      "route_want": "inbox",
+      "flags": [
+        {
+          "rule": "LONG_CARRY",
+          "action": "inbox",
+          "reason": "Truck can't park at the door: long carry changes the price.",
+          "evidence": "the truck has to park across the lot, maybe 200 feet",
+          "evidence_in_lead": true
+        },
+        {
+          "rule": "PRICE_COMMITMENT",
+          "action": "inbox",
+          "reason": "Customer wants a guaranteed or maximum price: a human decides that.",
+          "evidence": "flat rate",
+          "evidence_in_lead": true
+        }
+      ],
+      "missed": [],
+      "false": [],
+      "wrong_fields": {},
+      "quotes_not_in_lead": [],
+      "weight_lb": [
+        4600,
+        6400
+      ],
+      "sheet": {
+        "origin_city": {
+          "value": "Boston",
+          "quote": "Boston"
+        },
+        "destination_city": {
+          "value": "Providence",
+          "quote": "Providence"
+        },
+        "move_date": {
+          "value": "2026-12-12",
+          "quote": "Dec 12"
+        },
+        "date_changed": {
+          "value": false,
+          "quote": null
+        },
+        "home_type": {
+          "value": "apartment",
+          "quote": "apartment"
+        },
+        "bedrooms": {
+          "value": 3,
+          "quote": "3BR"
+        },
+        "origin_floor": {
+          "value": 6,
+          "quote": "6th floor"
+        },
+        "origin_elevator": {
+          "value": true,
+          "quote": "there's an elevator"
+        },
+        "long_carry": {
+          "value": true,
+          "quote": "the truck has to park across the lot, maybe 200 feet"
+        },
+        "areas_mentioned": {
+          "value": [],
+          "quote": null
+        },
+        "inventory": {
+          "value": [],
+          "quote": null
+        },
+        "bed_count": {
+          "value": null,
+          "quote": null
+        },
+        "specialty_items": {
+          "value": [],
+          "quote": null
+        },
+        "extra_stops": {
+          "value": [],
+          "quote": null
+        },
+        "price_commitment": {
+          "value": true,
+          "quote": "flat rate"
+        },
+        "packing": {
+          "value": false,
+          "quote": null
+        },
+        "storage": {
+          "value": false,
+          "quote": null
+        },
+        "storage_duration": {
+          "value": null,
+          "quote": null
+        },
+        "language": {
+          "value": "en",
+          "quote": null
+        },
+        "is_commercial": {
+          "value": false,
+          "quote": null
+        }
+      }
+    }
+  ]
+}

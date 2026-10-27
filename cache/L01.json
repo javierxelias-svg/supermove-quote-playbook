@@ -1,0 +1,97 @@
+{
+  "id": "L01",
+  "attempts": 1,
+  "errors": [],
+  "sheet": {
+    "origin_city": {
+      "value": "Oakland",
+      "quote": "Oakland"
+    },
+    "destination_city": {
+      "value": "Sacramento",
+      "quote": "Sacramento"
+    },
+    "move_date": {
+      "value": "2026-11-14",
+      "quote": "Nov 14"
+    },
+    "date_changed": {
+      "value": false,
+      "quote": null
+    },
+    "home_type": {
+      "value": "unknown",
+      "quote": null
+    },
+    "bedrooms": {
+      "value": 2,
+      "quote": "2 bedroom"
+    },
+    "origin_floor": {
+      "value": 2,
+      "quote": "2nd floor"
+    },
+    "origin_elevator": {
+      "value": true,
+      "quote": "there's an elevator"
+    },
+    "long_carry": {
+      "value": false,
+      "quote": null
+    },
+    "areas_mentioned": {
+      "value": [],
+      "quote": null
+    },
+    "inventory": {
+      "value": [
+        "couch",
+        "2 beds",
+        "dining table",
+        "chairs",
+        "a desk",
+        "30 boxes",
+        "grandma's piano"
+      ],
+      "quote": "couch, 2 beds, dining table + chairs, a desk, maybe 30 boxes? we're on the 2nd floor, there's an elevator but it's kinda small. oh and grandma's piano"
+    },
+    "bed_count": {
+      "value": 2,
+      "quote": "2 beds"
+    },
+    "specialty_items": {
+      "value": [
+        "upright piano"
+      ],
+      "quote": "grandma's piano, it's an upright"
+    },
+    "extra_stops": {
+      "value": [],
+      "quote": null
+    },
+    "price_commitment": {
+      "value": false,
+      "quote": null
+    },
+    "packing": {
+      "value": false,
+      "quote": null
+    },
+    "storage": {
+      "value": false,
+      "quote": null
+    },
+    "storage_duration": {
+      "value": null,
+      "quote": null
+    },
+    "language": {
+      "value": "en",
+      "quote": null
+    },
+    "is_commercial": {
+      "value": false,
+      "quote": null
+    }
+  }
+}

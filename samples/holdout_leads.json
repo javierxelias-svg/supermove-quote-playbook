@@ -1,0 +1,32 @@
+[
+  {
+    "id": "X01",
+    "label": "SAMPLE (invented, holdout)",
+    "channel": "web form",
+    "text": "2BR in Portland, OR going to Seattle on Nov 15. We're on the 1st floor. The hot tub on the back deck needs to come with us too."
+  },
+  {
+    "id": "X02",
+    "label": "SAMPLE (invented, holdout, Puerto Rican Spanish)",
+    "channel": "WhatsApp",
+    "text": "Wepa, me mudo de Bayamón a Guaynabo el 7 de noviembre. Es un apartamento de 1 cuarto en el cuarto piso y el ascensor funciona. Nada especial, unas 10 cajas y los muebles de siempre."
+  },
+  {
+    "id": "X03",
+    "label": "SAMPLE (invented, holdout)",
+    "channel": "web chat",
+    "text": "House in Tulsa to Oklahoma City, 3 bedrooms, around mid-December but we haven't picked the day yet."
+  },
+  {
+    "id": "X04",
+    "label": "SAMPLE (invented, holdout)",
+    "channel": "text message",
+    "text": "Moving out of my 1BR in Lincoln Park, Chicago (2nd floor, no elevator) to Evanston on Nov 20. Also need to drop a dresser off at my parents' place in Skokie."
+  },
+  {
+    "id": "X05",
+    "label": "SAMPLE (invented, holdout)",
+    "channel": "email",
+    "text": "Hi! 3BR apartment in Boston to Providence, Dec 12. 6th floor, there's an elevator. The loading dock is around the back and the truck has to park across the lot, maybe 200 feet. Can you do a flat rate?"
+  }
+]

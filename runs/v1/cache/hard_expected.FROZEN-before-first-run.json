@@ -1,0 +1,98 @@
+{
+  "H01": {
+    "label": "SAMPLE expected answers, hand-written 2026-10-27 BEFORE any model run",
+    "note": "Elevator exists but is broken: an estimator treats it as no elevator.",
+    "fields": {
+      "origin_city": "tampa",
+      "destination_city": "orlando",
+      "move_date": "2026-12-03",
+      "bedrooms": 2,
+      "origin_floor": 3,
+      "origin_elevator": false,
+      "specialty_items": [],
+      "storage": false,
+      "packing": false
+    },
+    "flags": [
+      "STAIRS_NO_ELEVATOR"
+    ],
+    "route": "inbox"
+  },
+  "H02": {
+    "label": "SAMPLE expected answers, hand-written 2026-10-27 BEFORE any model run",
+    "note": "EXTRA_STOP is NOT in the Playbook yet. An estimator would price the extra stop; this tests for a gap.",
+    "fields": {
+      "origin_city": "miami",
+      "destination_city": "fort lauderdale",
+      "move_date": "2026-11-08",
+      "bedrooms": 1,
+      "origin_floor": null,
+      "origin_elevator": null,
+      "specialty_items": [],
+      "storage": false,
+      "packing": false
+    },
+    "flags": [
+      "EXTRA_STOP"
+    ],
+    "route": "inbox"
+  },
+  "H03": {
+    "label": "SAMPLE expected answers, hand-written 2026-10-27 BEFORE any model run",
+    "note": "'caja fuerte' = safe; 'marquesina' = PR carport/garage, so no attic/garage question needed.",
+    "fields": {
+      "origin_city": "ponce",
+      "destination_city": "mayag",
+      "move_date": "2026-12-20",
+      "bedrooms": 3,
+      "origin_floor": null,
+      "origin_elevator": null,
+      "specialty_items": [
+        "caja fuerte"
+      ],
+      "storage": false,
+      "packing": false
+    },
+    "flags": [
+      "SPECIALTY_ITEM",
+      "LANGUAGE"
+    ],
+    "route": "inbox"
+  },
+  "H04": {
+    "label": "SAMPLE expected answers, hand-written 2026-10-27 BEFORE any model run",
+    "note": "Friday after Thanksgiving 2026 (Nov 26) = Nov 27.",
+    "fields": {
+      "origin_city": "columbus",
+      "destination_city": "dublin",
+      "move_date": "2026-11-27",
+      "bedrooms": 2,
+      "origin_floor": 1,
+      "origin_elevator": null,
+      "specialty_items": [],
+      "storage": false,
+      "packing": false
+    },
+    "flags": [],
+    "route": "auto_quote"
+  },
+  "H05": {
+    "label": "SAMPLE expected answers, hand-written 2026-10-27 BEFORE any model run",
+    "note": "PRICE_COMMITMENT is NOT in the Playbook yet. A not-to-exceed promise is a human decision; tests for a gap.",
+    "fields": {
+      "origin_city": "seattle",
+      "destination_city": "tacoma",
+      "move_date": "2026-11-12",
+      "bedrooms": 0,
+      "origin_floor": 5,
+      "origin_elevator": true,
+      "specialty_items": [],
+      "storage": false,
+      "packing": false
+    },
+    "flags": [
+      "PRICE_COMMITMENT"
+    ],
+    "route": "inbox"
+  }
+}

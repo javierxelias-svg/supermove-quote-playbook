@@ -1,0 +1,14 @@
+lead  route (want)               fields  missed flags                 false flags            bad quotes
+H01   auto_quote (inbox) X       8/9     STAIRS_NO_ELEVATOR           -                      -
+      field origin_elevator: want False, got None
+H02   auto_quote (inbox) X       9/9     EXTRA_STOP                   -                      -
+H03   auto_quote (inbox) X       9/9     SPECIALTY_ITEM               -                      -
+H04   auto_quote (auto_quote)    9/9     -                            -                      -
+H05   auto_quote (inbox) X       9/9     PRICE_COMMITMENT             -                      -
+
+fields correct : 44/45
+flags caught   : 1/5  (missed 4)
+false flags    : 0
+route correct  : 1/5
+quotes verbatim: 31/31
+extract failed : 0

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "L01",
+    "label": "SAMPLE (invented)",
+    "channel": "text message",
+    "text": "hey!! so we're finally moving lol. our 2 bedroom in Oakland to Sacramento, probably Nov 14 if work lets me. stuff: couch, 2 beds, dining table + chairs, a desk, maybe 30 boxes? we're on the 2nd floor, there's an elevator but it's kinda small. oh and grandma's piano, it's an upright, she'd kill me if anything happened to it"
+  },
+  {
+    "id": "L02",
+    "label": "SAMPLE (invented)",
+    "channel": "email",
+    "text": "Subject: Office relocation - 18 workstations\n\nHello,\n\nWe are relocating our accounting office from Suite 400, 1200 Main St, Dallas, TX to 55 Commerce Pkwy, Plano, TX. Target is the weekend of December 6-7 so we don't lose a business day. Inventory: 18 desks, 18 task chairs, 6 lateral file cabinets, one conference table with 10 chairs, and a small server rack. The building requires a certificate of insurance and a freight elevator reservation.\n\nPlease send a quote.\n\nDana R., Office Manager"
+  },
+  {
+    "id": "L03",
+    "label": "SAMPLE (invented)",
+    "channel": "voice call transcript",
+    "text": "AGENT: Thanks for calling, I can help get you a quote. Where are you moving from?\nCALLER: A three-bedroom house in Plano, going down to Austin.\nAGENT: Great. What date are you thinking?\nCALLER: The 21st of November.\nAGENT: Got it, November 21st. Anything large or unusual?\nCALLER: Not really. The garage has my tools and a workbench, that's about it. Oh, actually, wait. My lease on the new place got pushed, so make it the 28th instead.\nAGENT: Okay, the 28th."
+  },
+  {
+    "id": "L04",
+    "label": "SAMPLE (invented)",
+    "channel": "web chat",
+    "text": "how much for a 1 bed"
+  },
+  {
+    "id": "L05",
+    "label": "SAMPLE (invented, Puerto Rican Spanish)",
+    "channel": "WhatsApp",
+    "text": "Buenas, necesito una mudanza de mi apartamento en Carolina a una casa en Caguas. Es un apartamento de 2 cuartos en el segundo piso y el edificio tiene ascensor. Tengo la nevera, un juego de cuarto, el sofá, una mesa con 4 sillas y como 20 cajas que ya tengo empacadas. Sería el sábado 15 de noviembre. ¿Cuánto me sale más o menos?"
+  },
+  {
+    "id": "L06",
+    "label": "SAMPLE (invented)",
+    "channel": "web form",
+    "text": "1BR, 3rd floor walkup in Park Slope, Brooklyn, moving to Jersey City on December 1st. Queen bed, dresser, couch, TV stand, about 15 boxes. Street parking only on my block, so the truck will probably have to park half a block away."
+  },
+  {
+    "id": "L07",
+    "label": "SAMPLE (invented)",
+    "channel": "email",
+    "text": "Hi there, we're moving our 4 bedroom house in Naperville, IL to Charlotte, NC on January 10. We'd like full packing service, we don't have time to pack ourselves. Furniture for 4 bedrooms, the living room, dining room and a home office. Can you give us an estimate?"
+  },
+  {
+    "id": "L08",
+    "label": "SAMPLE (invented)",
+    "channel": "web form",
+    "text": "Moving from my studio apartment in Austin (ground floor) to a 2BR in Round Rock on Nov 22. Items: king bed, 2 queen beds, a bunk bed, sectional, 2 sofas, dining table for 8, 3 dressers, an elliptical."
+  },
+  {
+    "id": "L09",
+    "label": "SAMPLE (invented)",
+    "channel": "text message",
+    "text": "Need to be out of my 2BR condo in Phoenix on Nov 30 (4th floor, there's an elevator). The new place in Scottsdale isn't ready yet, so everything has to go into storage first and then get delivered, not sure when."
+  },
+  {
+    "id": "L10",
+    "label": "SAMPLE (invented)",
+    "channel": "web chat",
+    "text": "Hi, we're thinking about moving from Denver to Boulder sometime next year. 3 bedroom townhouse. We have a gun safe in the basement. Just want a ballpark for now."
+  }
+]

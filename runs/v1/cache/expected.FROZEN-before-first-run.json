@@ -1,0 +1,192 @@
+{
+  "L01": {
+    "label": "SAMPLE expected answers, hand-written 2026-10-27 BEFORE any model run",
+    "fields": {
+      "origin_city": "oakland",
+      "destination_city": "sacramento",
+      "move_date": "2026-11-14",
+      "bedrooms": 2,
+      "origin_floor": 2,
+      "origin_elevator": true,
+      "specialty_items": [
+        "piano"
+      ],
+      "storage": false,
+      "packing": false
+    },
+    "flags": [
+      "SPECIALTY_ITEM"
+    ],
+    "route": "inbox"
+  },
+  "L02": {
+    "label": "SAMPLE expected answers, hand-written 2026-10-27 BEFORE any model run",
+    "fields": {
+      "origin_city": "dallas",
+      "destination_city": "plano",
+      "move_date": "2026-12-06",
+      "bedrooms": null,
+      "origin_floor": null,
+      "origin_elevator": true,
+      "specialty_items": [
+        "server rack"
+      ],
+      "storage": false,
+      "packing": false
+    },
+    "flags": [
+      "COMMERCIAL",
+      "SPECIALTY_ITEM"
+    ],
+    "route": "inbox"
+  },
+  "L03": {
+    "label": "SAMPLE expected answers, hand-written 2026-10-27 BEFORE any model run",
+    "fields": {
+      "origin_city": "plano",
+      "destination_city": "austin",
+      "move_date": "2026-11-28",
+      "bedrooms": 3,
+      "origin_floor": null,
+      "origin_elevator": null,
+      "specialty_items": [],
+      "storage": false,
+      "packing": false
+    },
+    "flags": [
+      "DATE_CHANGED"
+    ],
+    "route": "ask"
+  },
+  "L04": {
+    "label": "SAMPLE expected answers, hand-written 2026-10-27 BEFORE any model run",
+    "fields": {
+      "origin_city": null,
+      "destination_city": null,
+      "move_date": null,
+      "bedrooms": 1,
+      "origin_floor": null,
+      "origin_elevator": null,
+      "specialty_items": [],
+      "storage": false,
+      "packing": false
+    },
+    "flags": [
+      "NO_DATE",
+      "MISSING_ADDRESS"
+    ],
+    "route": "ask"
+  },
+  "L05": {
+    "label": "SAMPLE expected answers, hand-written 2026-10-27 BEFORE any model run",
+    "fields": {
+      "origin_city": "carolina",
+      "destination_city": "caguas",
+      "move_date": "2026-11-15",
+      "bedrooms": 2,
+      "origin_floor": 2,
+      "origin_elevator": true,
+      "specialty_items": [],
+      "storage": false,
+      "packing": false
+    },
+    "flags": [
+      "LANGUAGE"
+    ],
+    "route": "auto_quote"
+  },
+  "L06": {
+    "label": "SAMPLE expected answers, hand-written 2026-10-27 BEFORE any model run",
+    "fields": {
+      "origin_city": "brooklyn",
+      "destination_city": "jersey city",
+      "move_date": "2026-12-01",
+      "bedrooms": 1,
+      "origin_floor": 3,
+      "origin_elevator": false,
+      "specialty_items": [],
+      "storage": false,
+      "packing": false
+    },
+    "flags": [
+      "STAIRS_NO_ELEVATOR",
+      "LONG_CARRY"
+    ],
+    "route": "inbox"
+  },
+  "L07": {
+    "label": "SAMPLE expected answers, hand-written 2026-10-27 BEFORE any model run",
+    "fields": {
+      "origin_city": "naperville",
+      "destination_city": "charlotte",
+      "move_date": "2027-01-10",
+      "bedrooms": 4,
+      "origin_floor": null,
+      "origin_elevator": null,
+      "specialty_items": [],
+      "storage": false,
+      "packing": true
+    },
+    "flags": [
+      "ATTIC_GARAGE_UNKNOWN"
+    ],
+    "route": "ask"
+  },
+  "L08": {
+    "label": "SAMPLE expected answers, hand-written 2026-10-27 BEFORE any model run",
+    "fields": {
+      "origin_city": "austin",
+      "destination_city": "round rock",
+      "move_date": "2026-11-22",
+      "bedrooms": 0,
+      "origin_floor": 1,
+      "origin_elevator": null,
+      "specialty_items": [],
+      "storage": false,
+      "packing": false
+    },
+    "flags": [
+      "INVENTORY_CONFLICT"
+    ],
+    "route": "inbox"
+  },
+  "L09": {
+    "label": "SAMPLE expected answers, hand-written 2026-10-27 BEFORE any model run",
+    "fields": {
+      "origin_city": "phoenix",
+      "destination_city": "scottsdale",
+      "move_date": "2026-11-30",
+      "bedrooms": 2,
+      "origin_floor": 4,
+      "origin_elevator": true,
+      "specialty_items": [],
+      "storage": true,
+      "packing": false
+    },
+    "flags": [
+      "STORAGE_NO_DURATION"
+    ],
+    "route": "ask"
+  },
+  "L10": {
+    "label": "SAMPLE expected answers, hand-written 2026-10-27 BEFORE any model run",
+    "fields": {
+      "origin_city": "denver",
+      "destination_city": "boulder",
+      "move_date": null,
+      "bedrooms": 3,
+      "origin_floor": null,
+      "origin_elevator": null,
+      "specialty_items": [
+        "gun safe"
+      ],
+      "storage": false,
+      "packing": false
+    },
+    "flags": [
+      "NO_DATE",
+      "SPECIALTY_ITEM"
+    ],
+    "route": "inbox"
+  }
+}

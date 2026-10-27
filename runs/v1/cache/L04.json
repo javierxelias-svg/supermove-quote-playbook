@@ -1,0 +1,79 @@
+{
+  "id": "L04",
+  "attempts": 1,
+  "errors": [],
+  "sheet": {
+    "origin_city": {
+      "value": null,
+      "quote": null
+    },
+    "destination_city": {
+      "value": null,
+      "quote": null
+    },
+    "move_date": {
+      "value": null,
+      "quote": null
+    },
+    "date_changed": {
+      "value": false,
+      "quote": null
+    },
+    "home_type": {
+      "value": "unknown",
+      "quote": null
+    },
+    "bedrooms": {
+      "value": 1,
+      "quote": "1 bed"
+    },
+    "origin_floor": {
+      "value": null,
+      "quote": null
+    },
+    "origin_elevator": {
+      "value": null,
+      "quote": null
+    },
+    "long_carry": {
+      "value": false,
+      "quote": null
+    },
+    "areas_mentioned": {
+      "value": [],
+      "quote": null
+    },
+    "inventory": {
+      "value": [],
+      "quote": null
+    },
+    "bed_count": {
+      "value": null,
+      "quote": null
+    },
+    "specialty_items": {
+      "value": [],
+      "quote": null
+    },
+    "packing": {
+      "value": false,
+      "quote": null
+    },
+    "storage": {
+      "value": false,
+      "quote": null
+    },
+    "storage_duration": {
+      "value": null,
+      "quote": null
+    },
+    "language": {
+      "value": "en",
+      "quote": null
+    },
+    "is_commercial": {
+      "value": false,
+      "quote": null
+    }
+  }
+}

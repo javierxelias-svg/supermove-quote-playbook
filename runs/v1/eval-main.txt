@@ -1,0 +1,18 @@
+lead  route (want)               fields  missed flags                 false flags            bad quotes
+L01   inbox (inbox)              9/9     -                            -                      -
+L02   inbox (inbox)              9/9     -                            -                      -
+L03   ask (ask)                  9/9     -                            -                      -
+L04   ask (ask)                  9/9     -                            -                      -
+L05   auto_quote (auto_quote)    9/9     -                            -                      -
+L06   inbox (inbox)              9/9     -                            -                      -
+L07   ask (ask)                  9/9     -                            -                      -
+L08   inbox (inbox)              9/9     -                            -                      -
+L09   ask (ask)                  9/9     -                            -                      -
+L10   inbox (inbox)              9/9     -                            -                      -
+
+fields correct : 90/90
+flags caught   : 14/14  (missed 0)
+false flags    : 0
+route correct  : 10/10
+quotes verbatim: 76/76
+extract failed : 0

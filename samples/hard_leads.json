@@ -1,0 +1,32 @@
+[
+  {
+    "id": "H01",
+    "label": "SAMPLE (invented, hard)",
+    "channel": "email",
+    "text": "Moving my mom out of her place in Tampa into ours in Orlando on Dec 3. She's in a 2-bedroom on the 3rd floor. The elevator has been broken for a month and the building says it'll maybe be fixed by then."
+  },
+  {
+    "id": "H02",
+    "label": "SAMPLE (invented, hard)",
+    "channel": "text message",
+    "text": "Need to move my 1BR from Miami to Fort Lauderdale on Nov 8. Can you also grab my sister's couch and dresser in Hollywood on the way?"
+  },
+  {
+    "id": "H03",
+    "label": "SAMPLE (invented, hard, Puerto Rican Spanish)",
+    "channel": "WhatsApp",
+    "text": "Saludos, me mudo de Ponce pa' Mayagüez el 20 de diciembre. Es una casa de 3 cuartos y en la marquesina tengo herramientas y un congelador. También hay una caja fuerte bien pesada."
+  },
+  {
+    "id": "H04",
+    "label": "SAMPLE (invented, hard)",
+    "channel": "web form",
+    "text": "We close on the house the Friday after Thanksgiving, so we'd move that day. 2BR apartment in Columbus, OH (1st floor) to the new house in Dublin, OH."
+  },
+  {
+    "id": "H05",
+    "label": "SAMPLE (invented, hard)",
+    "channel": "web chat",
+    "text": "Studio on the 5th floor in Seattle (elevator building) to Tacoma, Nov 12. Can you guarantee it won't go over $1,500? That's my budget, period."
+  }
+]
